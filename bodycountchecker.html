@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Count Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        p {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Body Count Checker</h1>
+    <input type="number" id="bodyCountInput" placeholder="Enter your body count">
+    <button onclick="checkBodyCount()">Submit</button>
+    <p id="result"></p>
+
+    <script>
+        function checkBodyCount() {
+            // Get the input value
+            const n = parseInt(document.getElementById("bodyCountInput").value);
+
+            // Logic from your C code
+            let result = "";
+            if (n === 0) {
+                result = "You are a worthless piece of shit. KILL YOURSELF.";
+            } else if (n < 0) {
+                result = "Use a valid number.";
+            } else if (n < 69 && n >= 10) {
+                result = "Damn playboy!!";
+            } else if (n === 69) {
+                result = "Nice try diddy..";
+            } else if (n >= 70) {
+                result = "The heck??";
+            } else {
+                result = "Nice puck boy.";
+            }
+
+            // Display the result
+            document.getElementById("result").textContent = result;
+        }
+    </script>
+</body>
+</html>
